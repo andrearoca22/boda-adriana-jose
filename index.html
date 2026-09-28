@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Boda de Adriana y José · 18 de septiembre de 2027">
+  <title>Adriana & José · 18.09.2027</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero" id="inicio">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a class="brand" href="#inicio">A <span>&</span> J</a>
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <div class="nav-links">
+        <a href="#historia">La celebración</a>
+        <a href="#programa">Programa</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a href="#rsvp" class="nav-cta">Confirmar asistencia</a>
+      </div>
+    </nav>
+    <div class="hero-content container reveal">
+      <img class="logo" src="assets/logo_Adriana.jpeg" alt="Logo de Adriana y José">
+      <p class="eyebrow">Nos casamos</p>
+      <h1>Adriana <em>&</em> José</h1>
+      <p class="date">18 de septiembre de 2027 · 12:00 h</p>
+      <a class="button button-light" href="#rsvp">Acompáñanos</a>
+    </div>
+    <a class="scroll-hint" href="#historia" aria-label="Descubrir más">↓</a>
+  </header>
+
+  <main>
+    <section class="section intro container reveal" id="historia">
+      <p class="eyebrow">Un día para recordar</p>
+      <h2>Nos encantará compartirlo contigo</h2>
+      <p>Después de tantos momentos compartidos, queremos celebrar nuestro amor rodeados de las personas que más queremos.</p>
+      <div class="ornament">✦</div>
+    </section>
+
+    <section class="section schedule-section" id="programa">
+      <div class="container">
+        <p class="eyebrow">Agenda</p>
+        <h2>El programa del día</h2>
+        <div class="timeline">
+          <article class="timeline-item reveal"><time>12:00</time><div><h3>Ceremonia</h3><p>El comienzo de nuestra historia como matrimonio.</p></div></article>
+          <article class="timeline-item reveal"><time>14:00</time><div><h3>Cóctel</h3><p>Un brindis para celebrar juntos.</p></div></article>
+          <article class="timeline-item reveal"><time>15:00</time><div><h3>Banquete</h3><p>Comida, conversación y muchos recuerdos.</p></div></article>
+          <article class="timeline-item reveal"><time>16:30</time><div><h3>Fiesta</h3><p>¡A bailar hasta las 22:00!</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section location container reveal" id="ubicacion">
+      <div>
+        <p class="eyebrow">Dónde</p>
+        <h2>Quina Hayara</h2>
+        <p>Guadalajara</p>
+        <a class="button" href="https://share.google/E6xCyaSdzmvK3UZvh" target="_blank" rel="noopener">Ver en Google Maps</a>
+      </div>
+      <div class="info-card"><span class="icon">⌂</span><h3>Alojamiento</h3><p>Hay un hotel disponible para reservar alojamiento.</p><p class="placeholder">[Añadir nombre y enlace del hotel]</p></div>
+      <div class="info-card"><span class="icon">⌖</span><h3>Cómo llegar</h3><p>No habrá autobús, pero el recinto dispone de parking.</p></div>
+    </section>
+
+    <section class="section rsvp-section" id="rsvp">
+      <div class="container rsvp-grid">
+        <div class="reveal"><p class="eyebrow">Tu respuesta</p><h2>¿Nos acompañas?</h2><p>Confirma tu asistencia antes del <strong>[AÑADIR FECHA LÍMITE]</strong>.</p></div>
+        <form id="rsvp-form" class="rsvp-form reveal">
+          <label>Nombre de los invitados <input name="nombre" required placeholder="Nombre y apellidos"></label>
+          <fieldset><legend>¿Asistirás?</legend><label class="choice"><input type="radio" name="asistencia" value="Sí" required> Sí, allí estaré</label><label class="choice"><input type="radio" name="asistencia" value="No"> No podré asistir</label></fieldset>
+          <label>Número de acompañantes <input name="acompanantes" type="number" min="0" max="10" value="0"></label>
+          <label>Restricciones alimentarias <input name="alimentacion" placeholder="Ninguna / especificar"></label>
+          <label>¿Hay embarazo? <select name="embarazo"><option value="No">No</option><option value="Sí">Sí</option><option value="Prefiero no decirlo">Prefiero no decirlo</option></select></label>
+          <label>Comentarios <textarea name="comentarios" rows="3" placeholder="Cuéntanos lo que necesitemos saber"></textarea></label>
+          <button class="button" type="submit">Enviar confirmación</button>
+          <p id="form-message" class="form-message" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer><p>Con cariño, Adriana & José</p><p>18 · 09 · 2027</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
