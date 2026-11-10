@@ -1,4 +1,4 @@
-const CONFIG = { rsvpEndpoint: "[PEGAR_AQUI_URL_DE_GOOGLE_APPS_SCRIPT]" };
+const CONFIG = { rsvpEndpoint: "https://script.google.com/macros/s/AKfycbx3CQt2qPn1SzsmpY_FbTZp4Gksn5JGZs9v5sx02iLBLcp3Da4aDxC1vhcrpa9edK2LKg/exec" };
 
 const menuButton = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
