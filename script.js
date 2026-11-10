@@ -30,7 +30,7 @@ document.querySelector('#rsvp-form').addEventListener('submit', async event => {
 
 const countdown = document.querySelector('#countdown');
 if (countdown) {
-  const weddingDate = new Date('2027-09-18T12:00:00+02:00');
+  const weddingDate = new Date('2027-09-17T12:00:00+02:00');
   const updateCountdown = () => {
     const remaining = weddingDate - new Date();
     if (remaining <= 0) { countdown.textContent = '¡Hoy celebramos juntos!'; return; }

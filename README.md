@@ -7,7 +7,7 @@ Web estática preparada para GitHub Pages.
 - Comprueba el enlace de Google Maps y los datos del alojamiento.
 - En script.js, sustituye rsvpEndpoint por la URL de Google Apps Script antes de recibir confirmaciones.
 
-El formulario recoge nombre, primer apellido, asistencia, restricciones alimentarias y canción. La cuenta atrás está configurada para el 18 de septiembre de 2027.
+El formulario recoge nombre, primer apellido, asistencia, restricciones alimentarias y canción. La cuenta atrás está configurada para el 17 de septiembre de 2027.
 
 ## Google Sheets
 
