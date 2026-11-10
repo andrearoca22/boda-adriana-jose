@@ -4,19 +4,15 @@ Web estática preparada para GitHub Pages.
 
 ## Antes de publicar
 
-1. Renombra el repositorio a `boda-adriana-jose` (el carácter `&` no es recomendable en URLs).
-2. Coloca `logo_Adriana.jpeg` dentro de una carpeta `assets/`.
-3. En `script.js`, sustituye `rsvpEndpoint` por la URL de la implementación de Google Apps Script.
-4. Cambia en `index.html` los marcadores del hotel y de la fecha límite del RSVP.
+- Comprueba el enlace de Google Maps y los datos del alojamiento.
+- En script.js, sustituye rsvpEndpoint por la URL de Google Apps Script antes de recibir confirmaciones.
+
+El formulario recoge nombre, primer apellido, asistencia, restricciones alimentarias y canción. La cuenta atrás está configurada para el 18 de septiembre de 2027.
 
 ## Google Sheets
 
-1. Crea una hoja con una pestaña llamada `Respuestas`.
-2. Añade como encabezados: Fecha, Nombre, Asistencia, Acompañantes, Alimentación, Embarazo, Comentarios.
-3. En Google Sheets abre Extensiones → Apps Script y copia `apps-script/Code.gs`.
-4. Implementa como aplicación web, ejecutando como tú y con acceso para cualquier usuario.
-5. Copia la URL resultante en `script.js`.
+Actualiza las cabeceras de la hoja y el Apps Script para que coincidan con los campos actuales: Fecha, Nombre, Apellido, Asistencia, Alimentación, Canción y Comentarios.
 
 ## GitHub Pages
 
-En el repositorio: Settings → Pages → Deploy from a branch → `main` → `/root`.
+En el repositorio: Settings → Pages → Deploy from a branch → main → /root.
