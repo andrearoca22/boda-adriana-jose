@@ -18,3 +18,18 @@ document.querySelector('#rsvp-form').addEventListener('submit', async event => {
   catch { message.textContent = 'No se ha podido enviar. Inténtalo de nuevo.'; }
   finally { button.disabled = false; }
 });
+
+const countdown = document.querySelector('#countdown');
+if (countdown) {
+  const weddingDate = new Date('2027-09-18T12:00:00+02:00');
+  const updateCountdown = () => {
+    const remaining = weddingDate - new Date();
+    if (remaining <= 0) { countdown.textContent = '¡Hoy celebramos juntos!'; return; }
+    const days = Math.floor(remaining / 86400000);
+    const hours = Math.floor((remaining % 86400000) / 3600000);
+    const minutes = Math.floor((remaining % 3600000) / 60000);
+    countdown.textContent = days + ' días · ' + hours + ' horas · ' + minutes + ' minutos';
+  };
+  updateCountdown();
+  setInterval(updateCountdown, 60000);
+}
