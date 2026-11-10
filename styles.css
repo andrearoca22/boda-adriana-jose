@@ -20,9 +20,11 @@ a:not(.button):not(.brand){color:#bb1769}
 .travel-options figcaption{color:var(--olive-dark);font-size:.8rem;margin-top:6px}
 @media(max-width:720px){.venue,.location-cards{grid-template-columns:1fr}.venue-art{max-height:320px}.location-section{padding:75px 0}}
 
-/* Guirnaldas de luces en la portada */
-.hero{background-image:linear-gradient(rgba(251,247,243,.48),rgba(251,247,243,.62)),url('assets/guirnaldas-luces-finca.png');background-size:cover;background-position:center 48%}
-.hero-content{position:relative;z-index:1}
+/* Cenefa aislada de luces, limitada al bloque del título */
+.hero{background-image:radial-gradient(circle at 50% 45%,#fffdf9 0,#f7eee8 54%,#efe4da 100%)}
+.hero-content{position:relative;z-index:1;isolation:isolate}
+.hero-content::before{content:"";position:absolute;z-index:0;pointer-events:none;top:-46px;left:50%;transform:translateX(-50%);width:min(150%,1200px);height:clamp(180px,34vw,390px);background:url('assets/cenefas-luces-transparentes.png') center top/100% 100% no-repeat}
+.hero-content>*{position:relative;z-index:1}
 .door-interaction{display:grid;justify-items:center;gap:14px;margin:30px auto 0}
 .door-illustration{width:min(260px,68vw);height:auto;overflow:visible;filter:drop-shadow(0 7px 10px rgba(60,48,32,.16))}
 .door-frame{fill:#777b5d}.door-opening{fill:#fbf7f3}
@@ -39,3 +41,4 @@ a:not(.button):not(.brand){color:#bb1769}
 .hotel-button{margin-top:8px}
 @keyframes time-appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){.door-left,.door-right,.ceremony-time{transition:none;animation:none}}
+@media(max-width:720px){.hero-content::before{top:-25px;width:155%;height:190px}}
