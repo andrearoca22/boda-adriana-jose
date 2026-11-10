@@ -19,3 +19,23 @@ a:not(.button):not(.brand){color:#bb1769}
 .travel-options figure{margin:0;text-align:center}.travel-options img{display:block;width:100%;height:110px;object-fit:contain;background:var(--beige);padding:8px}
 .travel-options figcaption{color:var(--olive-dark);font-size:.8rem;margin-top:6px}
 @media(max-width:720px){.venue,.location-cards{grid-template-columns:1fr}.venue-art{max-height:320px}.location-section{padding:75px 0}}
+
+/* Guirnaldas de luces en la portada */
+.hero{background-image:linear-gradient(rgba(251,247,243,.48),rgba(251,247,243,.62)),url('assets/guirnaldas-luces-finca.png');background-size:cover;background-position:center 48%}
+.hero-content{position:relative;z-index:1}
+.door-interaction{display:grid;justify-items:center;gap:14px;margin:30px auto 0}
+.door-illustration{width:min(260px,68vw);height:auto;overflow:visible;filter:drop-shadow(0 7px 10px rgba(60,48,32,.16))}
+.door-frame{fill:#777b5d}.door-opening{fill:#fbf7f3}
+.door-left,.door-right{fill:#b8875e;stroke:#79583e;stroke-width:3;transition:transform .95s cubic-bezier(.2,.75,.25,1);transform-box:view-box}
+.door-left{transform-origin:52px 110px}.door-right{transform-origin:268px 110px}
+.door-line{fill:none;stroke:#e4c39c;stroke-width:3}.door-left circle,.door-right circle{fill:#f2d39b;stroke:none}
+.door-interaction.is-open .door-left{transform:perspective(500px) rotateY(68deg) translateX(-8px)}
+.door-interaction.is-open .door-right{transform:perspective(500px) rotateY(-68deg) translateX(8px)}
+.door-button{border:1px solid #bb1769;background:transparent;color:#bb1769;padding:12px 24px;font:500 .75rem Montserrat,Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:background .25s,color .25s}
+.door-button:hover,.door-button:focus-visible{background:#bb1769;color:#fff}
+.door-button:focus-visible{outline:3px solid #d8aaa8;outline-offset:3px}
+.ceremony-time{margin:4px 0 0;color:var(--olive-dark);font-family:"Cormorant Garamond",Georgia,serif;font-size:1.8rem;animation:time-appear .55s ease both}
+.ceremony-time[hidden]{display:none}
+.hotel-button{margin-top:8px}
+@keyframes time-appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.door-left,.door-right,.ceremony-time{transition:none;animation:none}}

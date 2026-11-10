@@ -5,6 +5,15 @@ const navLinks = document.querySelector('.nav-links');
 menuButton?.addEventListener('click', () => { const open = navLinks.classList.toggle('open'); menuButton.setAttribute('aria-expanded', open); });
 document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('open')));
 
+const doorButton = document.querySelector('#door-button');
+doorButton?.addEventListener('click', () => {
+  const opened = doorButton.getAttribute('aria-expanded') !== 'true';
+  doorButton.setAttribute('aria-expanded', String(opened));
+  document.querySelector('.door-interaction')?.classList.toggle('is-open', opened);
+  document.querySelector('#ceremony-time').hidden = !opened;
+  doorButton.textContent = opened ? 'Cerrar las puertas' : 'Abrir las puertas';
+});
+
 const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }), { threshold: .12 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
